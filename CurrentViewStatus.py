@@ -24,14 +24,14 @@ def writeStatus(view):
 	path = view.file_name()
 	# Checking are there any modification on view
 	isDirty = view.is_dirty()
+	filename = ("❗" if isDirty else "") + view.name()
 	# checking is the path exist if not its a new file
 	if path is not None:
 		# Spliting for path and name of the file
 		file_path = os.path.split(path)[0]
-		file_name = os.path.split(path)[1]
 		# Go through project folders
 		for projectFolder in view.window().folders():
-			print(projectFolder)
+			# print(projectFolder)
 			if (projectFolder not in file_path):
 				continue
 			# print("This is", projectFolder)
@@ -44,10 +44,11 @@ def writeStatus(view):
 			path = path.replace(projectPath + '/', '', 1)
 			# we don't need to continue the whole folder paths
 			break
-	else:
-		path = 'untitled'
-	view.set_status('file_name', ("❗" if isDirty else "🍺 ") + path)
+		filename = ("❗" if isDirty else "🍺 ") + path
+	# else:
+	# 	path = 'untitled'
 	# view.set_status('file_name', ("◉ " if isDirty else "◎ ") + 'untitled')
+	view.set_status('file_name', filename)
 ##
  # Plugin Definition
  # 
