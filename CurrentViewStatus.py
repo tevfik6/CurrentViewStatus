@@ -31,7 +31,7 @@ def writeStatus(view):
 		file_name = os.path.split(path)[1]
 		# Go through project folders
 		for projectFolder in view.window().folders():
-			print(projectFolder)
+			# print(projectFolder)
 			if (projectFolder not in file_path):
 				continue
 			# print("This is", projectFolder)
