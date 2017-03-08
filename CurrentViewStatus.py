@@ -57,3 +57,5 @@ class CurrentViewStatus(sublime_plugin.EventListener):
 		writeStatus(view)
 	def on_modified(self, view):
 		writeStatus(view)
+	def on_post_save(self, view):
+		writeStatus(view)
