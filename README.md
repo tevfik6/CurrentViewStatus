@@ -1,4 +1,4 @@
-# CurrentViewStatus v1.0.1
+# CurrentViewStatus v1.0.2
 A Sublime Text 3 Plugin shows current view's status with path in the Status Bar of Sublime
 
 ## Features
@@ -8,6 +8,6 @@ A Sublime Text 3 Plugin shows current view's status with path in the Status Bar 
 - Indicates the view status dirty or not (saved or not)
 
 ## About
-- Version: 1.0.1
+- Version: 1.0.2
 - License: MIT License
 - Author: Tevfik Tümer
